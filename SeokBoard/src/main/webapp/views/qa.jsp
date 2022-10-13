@@ -10,12 +10,28 @@
 
 
 <title>Q&A</title>
+<style type="text/css">
+
+th, td {
+	text-align: center;
+}
+
+
+#qa {
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+</style>
 </head>
 <body>
 
-<h1>게시판</h1>
 
-<table>
+<table id="qa" class="table table-striped table-hover table-condensed">
 <tr>
 	<th>글번호</th>
 	<th>제목</th>

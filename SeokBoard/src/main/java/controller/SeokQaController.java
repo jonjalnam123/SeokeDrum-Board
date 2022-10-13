@@ -24,17 +24,14 @@ public class SeokQaController extends HttpServlet {
 	
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
-		System.out.println("qa [Get]");
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {				
 		
 		//게시글 전체 조회
 		List<qa> qaList = seokQaService.getList();
 		
 		//조회결과 MODEL값 전달
 		req.setAttribute("qaList", qaList);
-		System.out.println(qaList);
-		
-		
+						
 		//View 지정 및 응답
 		req.getRequestDispatcher("/views/qa.jsp").forward(req, resp);
 		

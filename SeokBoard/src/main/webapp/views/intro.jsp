@@ -17,8 +17,10 @@
 }
 
 #session {
-
-
+    position: absolute;
+ 	top:50%
+   
+    
 }
 
 </style>
@@ -45,7 +47,10 @@
     <span>이천 드림실용음악학원 드럼 강사</span><br>
     <span>수원 아이엘음악학원 드럼 강사</span>    
     </div>
-</div>    
+</div>
+
+
+
     
 
 

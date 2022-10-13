@@ -48,15 +48,15 @@ ul.nav>li>a:hover {
 
 
 	<ul class="nav">
-		<li><a href="/views/intro.jsp">Introduce</a></li>
+		<li><a href="/seok/intro">Introduce</a></li>
 
 		<li><a href="#">Notice</a></li>
 
-		<li><a href="/views/qa.jsp">Q&A</a></li>
+		<li><a href="/qa">Q&A</a></li>
 
 		<li><a href="#">Contact</a></li>
 		
-		<li><a href="/views/domain.jsp">Go Main</a></li>
+		<li><a href="/seok/domain">Go Main</a></li>
 	</ul>
 
 </body>
