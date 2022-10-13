@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/seok/domain")
-public class SeokDoMain extends HttpServlet {
+public class SeokDoMainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	

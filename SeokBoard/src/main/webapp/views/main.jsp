@@ -52,11 +52,11 @@ ul.nav>li>a:hover {
 
 		<li><a href="#">Notice</a></li>
 
-		<li><a href="#">Q&A</a></li>
+		<li><a href="/views/qa.jsp">Q&A</a></li>
 
 		<li><a href="#">Contact</a></li>
 		
-		<li><a href="/views/domain.jsp">To Main</a></li>
+		<li><a href="/views/domain.jsp">Go Main</a></li>
 	</ul>
 
 </body>
