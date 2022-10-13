@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/seok/domain")
-public class SeokDoMain extends HttpServlet {
+/**
+ * Servlet implementation class SeokQA
+ */
+@WebServlet("/qa")
+public class SeokQA extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("domain [GET]");
-		
-		req.getRequestDispatcher("/views/domain.jsp").forward(req, resp);
+		req.getRequestDispatcher("/views/qa.jsp").forward(req, resp);
 	}
 }

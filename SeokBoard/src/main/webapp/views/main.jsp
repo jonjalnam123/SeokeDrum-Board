@@ -55,6 +55,8 @@ ul.nav>li>a:hover {
 		<li><a href="#">Q&A</a></li>
 
 		<li><a href="#">Contact</a></li>
+		
+		<li><a href="/views/domain.jsp">To Main</a></li>
 	</ul>
 
 </body>

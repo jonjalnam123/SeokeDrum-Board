@@ -10,7 +10,7 @@
 #main img {
     width: 13%;
     height: 13%;
-    position: absolute;
+    position: fixed;
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%); 
