@@ -12,19 +12,21 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	
+	
 	//목록 버튼
-	$("#btnList").click(function() {
-		$(location).attr('href', '/qa')
+	$("#btnList").click(function() { 
+		$(location).attr('href', '/qa'); 
 	})
 
 	//수정 버튼
 	$("#btnUpdate").click(function() {
-		$(location).attr('href', './update?boardno=<%=viewBoard.getBoardno() %>')
+		
+		$(location).attr('href', './update?boardno=<%=viewBoard.getBoardno() %>');
 	})
 
 	//삭제버튼
 	$("#btnDelete").click(function() {
-		$(location).attr('href', './delete?boardno=<%=viewBoard.getBoardno() %>')
+		$(location).attr('href', './delete?boardno=<%=viewBoard.getBoardno() %>');
 	})
 
 })

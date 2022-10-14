@@ -32,7 +32,7 @@ public class SeokMemberController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
+		req.setCharacterEncoding("UTF-8"); 
 		//회원가입 전달파라미터 추출하기
 		SeokMember seokmember = seokmemberService.getJoinMember(req);
 		

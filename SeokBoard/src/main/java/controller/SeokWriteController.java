@@ -19,6 +19,7 @@ public class SeokWriteController extends HttpServlet {
 	//서비스 객체
 	private SeokQaService seokqaService = new SeokQaServiceImpl();
 	
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		

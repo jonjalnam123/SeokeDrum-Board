@@ -26,10 +26,13 @@ public class SeokViewController extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
 		System.out.println("BoardViewController doGet() - 전달파라미터 boardno : " + req.getParameter("boardno"));
 		
 		//전달파라미터 저장 객체 얻기
 		qa boardno = seokqaService.getBoardno(req);
+		
 		System.out.println("BoardViewController doGet() - 전달파라미터 객체 : " + boardno);
 		
 		

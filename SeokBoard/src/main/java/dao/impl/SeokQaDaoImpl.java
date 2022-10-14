@@ -38,8 +38,10 @@ public class SeokQaDaoImpl implements SeokQaDao {
 				qa Q = new qa(); //결과값 저장 객체
 				
 				//결과값 한 행씩 처리
-				Q.setBoardno(rs.getInt("boardno"));
+				Q.setBoardno(rs.getInt("boardno")); 
 				Q.setTitle(rs.getString("title"));
+				Q.setUserid(rs.getString("USERID"));  
+				Q.setHit(rs.getInt("HIT"));
 				Q.setContent(rs.getString("content"));
 				Q.setWritedate(rs.getDate("write_date"));
 				
@@ -174,7 +176,7 @@ public class SeokQaDaoImpl implements SeokQaDao {
 	@Override
 	public int updateHit(Connection conn, qa boardno) {
 		String sql = "";
-		sql += "UPDATE qa";
+		sql += "UPDATE seokeboard";
 		sql += "	SET hit = hit + 1";
 		sql += " WHERE boardno = ?";
 		
