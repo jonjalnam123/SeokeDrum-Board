@@ -31,6 +31,9 @@ public class SeokWriteController extends HttpServlet {
 		//작성글 삽입
 		seokqaService.write(req);
 		
+		System.out.println(req);
+
+		
 		resp.sendRedirect("/qa");
 		
 	}

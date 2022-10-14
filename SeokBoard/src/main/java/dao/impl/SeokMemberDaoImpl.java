@@ -17,7 +17,7 @@ public class SeokMemberDaoImpl implements SeokMemberDao {
 	@Override
 	public int insert(Connection conn, SeokMember seokmember) {
 		String sql = "";
-		sql += "INSERT INTO member ( userid, userpw, usernick )";
+		sql += "INSERT INTO seokmember ( userid, userpw, usernick )";
 		sql += " VALUES ( ?, ?, ? )";
 		
 		int res = 0;
@@ -39,11 +39,13 @@ public class SeokMemberDaoImpl implements SeokMemberDao {
 		
 		return res;
 	}
+	
+	
 
 	@Override
 	public int selectCntSeokMemberByUseridUserpw(Connection connection, SeokMember seokmember) {
 		String sql = "";
-		sql += "SELECT count(*) cnt FROM member";
+		sql += "SELECT count(*) cnt FROM seokmember";
 		sql += " WHERE userid = ?";
 		sql += "	AND userpw = ?";
 		
@@ -73,7 +75,7 @@ public class SeokMemberDaoImpl implements SeokMemberDao {
 	@Override
 	public SeokMember selectSeokMemberByUserid(Connection connection, SeokMember seokmember) {
 		String sql = "";
-		sql += "SELECT userid, userpw, usernick FROM member";
+		sql += "SELECT userid, userpw, usernick FROM seokmember";
 		sql += " WHERE userid = ?";
 		
 		SeokMember result = null;

@@ -19,6 +19,14 @@ ul.nav {
     text-align: center;
 }
 
+#vid{
+	position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
 /* 메인 메뉴의 항목 */
 ul.nav>li {
 	/* 수평으로 일렬 배치하기  */
@@ -54,9 +62,11 @@ ul.nav>li>a:hover {
 
 		<li><a href="/seok/notice">Notice</a></li>
 
-		<li><a href="#">Contact</a></li>
+		<li><a href="/seok/cont">Contact</a></li>
 		
-		<li><a href="/seok/join">Join</a></li>		
+		<li><a href="/seok/join">Join</a></li>	
+		
+		<li><a href="/seok/login">Login</a></li>	
 		
 		<li><a href="/seok/domain">Go Main</a></li>
 	</ul>
@@ -70,7 +80,7 @@ ul.nav>li>a:hover {
 		
 		<li><a href="/qa">Community</a></li>
 
-		<li><a href="#">Contact</a></li>
+		<li><a href="/seok/cont">Contact</a></li>
 		
 		<li><a href="/seok/logout">Logout</a></li>
 		
@@ -78,9 +88,14 @@ ul.nav>li>a:hover {
 	</ul>
 <%	} %>
 
-
+<div id= "vid">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J96xvH723_g" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 </body>
 </html>
+
+
 

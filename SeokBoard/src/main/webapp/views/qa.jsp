@@ -53,7 +53,7 @@ $(document).ready(function() {
 <tr>
 	<td><%=qaList.get(i).getBoardno() %></td>
 	<td>
-		<a href="/view?boardno=<%=qaList.get(i).getBoardno() %>">
+		<a href="/seok/view?boardno=<%=qaList.get(i).getBoardno() %>">
 			<%=qaList.get(i).getTitle() %>
 		</a>
 	</td>
