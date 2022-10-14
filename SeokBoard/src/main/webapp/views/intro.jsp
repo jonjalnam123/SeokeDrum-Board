@@ -9,19 +9,42 @@
 <style type="text/css">
 
 #wrap {
+
+    display: flex;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%,-50%);
-    
+    text-align: center;  
+}
+
+#ex1 {
+margin: 10px;
+}
+
+#ex2{
+margin: 10px;
 }
 
 #session {
+    display: flex;
+    align-items: center;
+      
     position: absolute;
- 	top:50%
-   
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: bold;   
+    }
+#session > div > img{
+	margin: 10px;
+}
     
 }
+
+
 
 </style>
 </head>
@@ -48,6 +71,13 @@
     <span>수원 아이엘음악학원 드럼 강사</span>    
     </div>
 </div>
+
+	<div id="session">	
+	    <div><img src= "https://musicmeta-phinf.pstatic.net/album/002/744/2744787.jpg?type=r360Fll&v=20200224145710" ><br><span>Comeback tonight</span></div>
+        <div><img src= "https://musicmeta-phinf.pstatic.net/album/002/529/2529674.jpg?type=r360Fll&v=20200220023710"  ><br><span>아이야</span></div>
+		<div><img src= "https://musicmeta-phinf.pstatic.net/album/005/591/5591502.jpg?type=r480Fll&v=20210414115933" style="width: 360px;" ><br><span>겨울부터 밤까지</span></div>
+        <div><img src= "https://musicmeta-phinf.pstatic.net/album/001/999/1999333.jpg?type=r480Fll&v=20220528152506" style="width: 360px;"><br><span>그리워해서</span></div>		
+	</div>
 
 
 

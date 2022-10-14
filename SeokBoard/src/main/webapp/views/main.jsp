@@ -3,8 +3,6 @@
 
 <%@ include file="/layout/header.jsp"%>
 
-<title>석이드럼 메인</title>
-
 <style type="text/css">
 
 
@@ -26,6 +24,7 @@ ul.nav>li {
 	/* 수평으로 일렬 배치하기  */
 	float: left;
 	line-height: 40px;
+	width: 200px;
 }
 
 ul.nav>li>a {
@@ -41,23 +40,47 @@ ul.nav>li>a:hover {
 	color: white;
 	transition: 0.7s;
 }
+
+
+
 </style>
 
 </head>
 <body>
 
-
+<%	if( session.getAttribute("login") == null ) { %>
 	<ul class="nav">
 		<li><a href="/seok/intro">Introduce</a></li>
 
-		<li><a href="#">Notice</a></li>
-
-		<li><a href="/qa">Q&A</a></li>
+		<li><a href="/seok/notice">Notice</a></li>
 
 		<li><a href="#">Contact</a></li>
 		
+		<li><a href="/seok/join">Join</a></li>		
+		
 		<li><a href="/seok/domain">Go Main</a></li>
 	</ul>
+<%	} %>
+
+<%	if( session.getAttribute("login") != null && (boolean) session.getAttribute("login") ) { %>
+	<ul class="nav">
+		<li><a href="/seok/intro">Introduce</a></li>
+
+		<li><a href="/seok/notice">Notice</a></li>
+		
+		<li><a href="/qa">Community</a></li>
+
+		<li><a href="#">Contact</a></li>
+		
+		<li><a href="/seok/logout">Logout</a></li>
+		
+		<li><a href="/seok/domain">Go Main</a></li>
+	</ul>
+<%	} %>
+
+
+
 
 </body>
 </html>
+

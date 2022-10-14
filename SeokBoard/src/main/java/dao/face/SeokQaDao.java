@@ -9,4 +9,11 @@ public interface SeokQaDao {
 
 	List <qa> selectAll(Connection connection);
 
-}
+	public int insert(Connection conn, qa qa);
+
+	
+
+	
+	}
+
+

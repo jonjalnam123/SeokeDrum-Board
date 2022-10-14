@@ -58,5 +58,36 @@ public class SeokQaDaoImpl implements SeokQaDao {
 		//최종 결과 반환
 		return qaList;
 	}
-	
+
+	@Override
+	public int insert(Connection conn, qa qa) {
+		
+		String sql = "";
+		sql += "INSERT INTO seokeboard ( boardno, title, userid, content, hit )";
+		sql += " VALUES ( ?, ?, ?, ?, 0 )";
+		
+		int res = 0;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			
+			ps.setInt(1, qa.getBoardno());
+			ps.setString(2, qa.getTitle());
+			ps.setString(3, qa.getUserid());
+			ps.setString(4, qa.getContent());
+			
+			res = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(ps);
+		}
+		
+		return res;
+
+
+	}
 }
+	
+
