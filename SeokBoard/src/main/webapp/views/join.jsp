@@ -5,6 +5,18 @@
 
 <title>Insert title here</title>
 
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+$("#btnCancel").click(function() {
+//		history.go(-1) //뒤로가기
+	$(location).attr('href', '/seok/main') //메인으로 가기
+ })
+})
+
+</script>
+
 
 <style type="text/css">
 
@@ -33,7 +45,7 @@
 <input type="text" name= "usernick" id="usernick"><br>
 
 <button class="btn btn-primary">가입</button>
-
+<button type="button" class="btn btn-danger" id="btnCancel">취소</button>
 
 </form>
 </div>

@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 	<div>
 		<label for="userpw">패스워드</label><br>
-			<input type="text" id="userpw" name="userpw">		
+			<input type="password" id="userpw" name="userpw">		
 	</div><br>
 
 	<div>
