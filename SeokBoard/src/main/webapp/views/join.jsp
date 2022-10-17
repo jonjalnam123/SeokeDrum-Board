@@ -13,6 +13,10 @@ $("#btnCancel").click(function() {
 //		history.go(-1) //뒤로가기
 	$(location).attr('href', '/seok/main') //메인으로 가기
  })
+ 
+ 	$("#joinok").click(function() {
+		alert("회원가입 성공!")
+	})
 })
 
 </script>
@@ -44,7 +48,7 @@ $("#btnCancel").click(function() {
 <label for ="usernick">닉네임</label><br>
 <input type="text" name= "usernick" id="usernick"><br>
 
-<button class="btn btn-primary">가입</button>
+<button id="joinok" class="btn btn-primary">가입</button>
 <button type="button" class="btn btn-danger" id="btnCancel">취소</button>
 
 </form>

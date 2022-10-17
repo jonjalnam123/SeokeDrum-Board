@@ -348,6 +348,36 @@ public class SeokQaDaoImpl implements SeokQaDao {
 		
 		return res;
 	}
+
+	@Override
+	public int update(Connection conn, qa board) {
+		String sql = "";
+		sql += "UPDATE seokeboard ";
+		sql += " SET";
+		sql += "	title = ?";
+		sql += "	, content = ?";
+		sql += " WHERE boardno = ?";
+		
+		int res = 0;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, board.getTitle());
+			ps.setString(2, board.getContent());
+			ps.setInt(3, board.getBoardno());
+			
+			res = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(ps);
+		}
+		
+		return res;
+
+	}
 }
 	
 

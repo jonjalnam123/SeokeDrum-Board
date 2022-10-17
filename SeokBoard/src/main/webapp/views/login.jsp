@@ -51,17 +51,16 @@ $(document).ready(function() {
 <div id="login">
 	<div>
 		<label for="userid">아이디</label><br>
-			<input type="text" id="userid" name="userid">
-		
+			<input  placeholder="Userid"type="text" id="userid" name="userid">
 	</div>
 
 	<div>
 		<label for="userpw">패스워드</label><br>
-			<input type="password" id="userpw" name="userpw">		
+			<input placeholder="Password" type="password" id="userpw" name="userpw">		
 	</div><br>
 
 	<div>
-		<button type="button" class="btn btn-primary" id="btnLogin">로그인</button>
+		<button type="button" class="btn btn-primary" id="btnLogin" >로그인</button>
 		<button type="button" class="btn btn-danger" id="btnCancel">취소</button>
 	</div>
 </div>

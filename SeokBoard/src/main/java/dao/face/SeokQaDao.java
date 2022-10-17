@@ -30,6 +30,8 @@ public interface SeokQaDao {
 
 	public int delete(Connection conn, qa qa);
 
+	public int update(Connection conn, qa board);
+
 	
 
 	

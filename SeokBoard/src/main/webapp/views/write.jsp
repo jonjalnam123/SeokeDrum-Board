@@ -9,6 +9,10 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
+			//알림버튼
+	$("#btnWrite").click(function() {
+		alert("작성되었습니다!")
+	})
 	
 	//작성버튼
 	$("#btnWrite").click(function() {
@@ -18,6 +22,8 @@ $(document).ready(function() {
 
 		$("form").submit();
 	})
+	
+
 	
 	//취소버튼
 	$("#btnCancel").click(function() {

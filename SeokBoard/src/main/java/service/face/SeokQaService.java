@@ -23,6 +23,8 @@ public interface SeokQaService {
 
 	public void delete(qa qa);
 
+	public void update(HttpServletRequest req);
+
 	
 
 }
