@@ -302,6 +302,52 @@ public class SeokQaDaoImpl implements SeokQaDao {
 		
 		return boardFile;
 	}
+
+	@Override
+	public int deleteFile(Connection conn, qa qa) {
+		String sql = "";
+		sql += "DELETE boardfile ";
+		sql += " WHERE boardno = ?";
+		
+		int res = 0;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, qa.getBoardno());
+			
+			res = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(ps);
+		}
+		
+		return res;
+	}
+
+	@Override
+	public int delete(Connection conn, qa qa) {
+		String sql = "";
+		sql += "DELETE seokeboard";
+		sql += " WHERE boardno = ?";
+		
+		int res = 0;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, qa.getBoardno());
+			
+			res = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCTemplate.close(ps);
+		}
+		
+		return res;
+	}
 }
 	
 

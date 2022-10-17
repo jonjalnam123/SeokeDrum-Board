@@ -231,5 +231,25 @@ public class SeokQaServiceImpl implements SeokQaService {
 	public BoardFile viewFile(qa viewBoard) {
 		return seokQaDao.selectFile(JDBCTemplate.getConnection(), viewBoard);
 	}
+
+	@Override
+	public void delete(qa qa) {
+		Connection conn = JDBCTemplate.getConnection();
+		
+		//첨부 파일 전부 삭제
+		if(seokQaDao.deleteFile(conn, qa) > 0 ) {
+			JDBCTemplate.commit(conn);
+		} else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+		//게시글 삭제
+		if(seokQaDao.delete(conn, qa) > 0 ) {
+			JDBCTemplate.commit(conn);
+		} else {
+			JDBCTemplate.rollback(conn);
+		}
+		
+	}
 	
 }

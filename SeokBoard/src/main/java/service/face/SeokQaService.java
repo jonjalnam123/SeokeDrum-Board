@@ -21,6 +21,8 @@ public interface SeokQaService {
 
 	public BoardFile viewFile(qa viewBoard);
 
+	public void delete(qa qa);
+
 	
 
 }

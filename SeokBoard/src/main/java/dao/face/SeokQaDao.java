@@ -18,13 +18,17 @@ public interface SeokQaDao {
 
 	public int insertFile(Connection conn, BoardFile boardFile);
 
-	int updateHit(Connection conn, qa boardno);
+	public int updateHit(Connection conn, qa boardno);
 
 	public qa selectBoardByBoard(Connection conn, qa boardno);
 
 	public String selectNickByBoard(Connection connection, qa viewBoard);
 
 	public BoardFile selectFile(Connection connection, qa viewBoard);
+
+	public int deleteFile(Connection conn, qa qa);
+
+	public int delete(Connection conn, qa qa);
 
 	
 
