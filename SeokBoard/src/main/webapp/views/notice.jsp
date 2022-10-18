@@ -89,6 +89,11 @@
 		<div class="content">
 			<p>10월 24일까지 부모님 참여 수업 진행 중!!</p>
 		</div>
+		
+		<button type="button" class="collapsible" onclick="collapse(this);">노래 연주는 1달 후 부터!</button>
+		<div class="content">
+			<p>노래 연주는 드럼 배운지 1달이 지나야 가능합니다 ^^</p>
+		</div>
 	</div>
 </body>
 </html>
