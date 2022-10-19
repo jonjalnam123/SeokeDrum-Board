@@ -12,6 +12,8 @@ public interface SeokMemberDao {
 
 	public SeokMember selectSeokMemberByUserid(Connection connection, SeokMember seokmember);
 
+	public int selectCntByUserId(Connection connection, SeokMember sMember);
+
 
 
 	

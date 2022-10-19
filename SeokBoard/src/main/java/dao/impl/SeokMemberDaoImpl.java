@@ -11,6 +11,7 @@ import dto.SeokMember;
 
 public class SeokMemberDaoImpl implements SeokMemberDao {
 	
+	
 	private PreparedStatement ps;
 	private ResultSet rs;
 
@@ -103,6 +104,44 @@ public class SeokMemberDaoImpl implements SeokMemberDao {
 				
 		return result;
 	}
+
+
+
+
+	@Override
+	public int selectCntByUserId(Connection connection, SeokMember sMember) {
+		String sql = "";
+		sql += "SELECT count(*) cnt FROM seokmember";
+		sql += " WHERE userid = ?";
+		
+		int cnt = 0;
+		
+		try {
+			ps = connection.prepareStatement(sql);
+			ps.setString(1, sMember.getUserid());
+			
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				cnt = rs.getInt("cnt");
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+		return cnt;
+	}
+
+
+
+
+
+
+
+
+
+
 }
 
 

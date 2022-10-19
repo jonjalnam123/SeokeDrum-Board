@@ -16,4 +16,6 @@ public interface SeokMemberService {
 
 	public SeokMember info(SeokMember seokmember);
 
+	public int existsId(SeokMember sMember);
+
 }

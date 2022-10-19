@@ -74,5 +74,15 @@ public class SeokMemberServiceImpl implements SeokMemberService {
 		
 		return seokmemberDao.selectSeokMemberByUserid(JDBCTemplate.getConnection(), seokmember);
 	}
+
+
+	@Override
+	public int existsId(SeokMember sMember) {
+		if(seokmemberDao.selectCntByUserId(JDBCTemplate.getConnection(), sMember) > 0) {
+			return 1;
+		} else {
+		return 0;
+		}
 	
+}
 }
