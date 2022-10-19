@@ -19,9 +19,7 @@ $("#btnCancel").click(function() {
 })
 })
 
-function IdCheck() {
-	window.open("/views/IdCheckForm.jsp","idwin","width=400. height=350");
-}
+
 
 function chkId() {
     var id = $('#userid').val(); 
@@ -65,9 +63,7 @@ function chkId() {
 <form action="/seok/join" method="post">
 
 <label for ="userid">아이디</label><br>
-<input type="text" name= "userid" id="userid">
-<p id="result">&nbsp;</p>
-
+<input type="text" name= "userid" id="userid"><p id="result">&nbsp;</p>
 
 <label for ="userpw">비밀번호</label><br>
 <input type="text" name= "userpw" id="userpw"><br>
