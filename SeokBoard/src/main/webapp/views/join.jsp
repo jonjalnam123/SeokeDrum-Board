@@ -14,10 +14,11 @@ $("#btnCancel").click(function() {
 	$(location).attr('href', '/seok/main') //메인으로 가기
  })
  
- 	$("#joinok").click(function() {
-		alert("회원가입 성공!")
-	})
 })
+
+function IdCheck() {
+	window.open("/views/IdCheckForm.jsp","idwin","width=400. height=350");
+}
 
 </script>
 
@@ -40,7 +41,9 @@ $("#btnCancel").click(function() {
 <form action="/seok/join" method="post">
 
 <label for ="userid">아이디</label><br>
-<input type="text" name= "userid" id="userid"><br>
+<input type="text" name= "userid" id="userid">
+<input type="button" onclick="IdCheck()" value="중복확인">
+<br>
 
 <label for ="userpw">비밀번호</label><br>
 <input type="text" name= "userpw" id="userpw"><br>
